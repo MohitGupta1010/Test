@@ -9,3 +9,16 @@ jobs:
        steps:
            - name: Print the message
              run: echo "Hello my friend super user ROOT"
+
+           - name: send mail
+             if: success()
+             uses: dawidd6/actions-send-mail@v6
+             with:
+               server_address: smtp.gmail.com
+               server_port: 465
+               username: ${{ secrets.user_name }}
+               password: ${{ secrets.user_password }}
+               subject: Test mail
+               from: ${{ secrets.sender }}
+               to: ${{ secrets.receiver }}
+               body: "Cron execution for ${{ github.repository }} for branch ${{ github.ref_name }} completed successfully"
