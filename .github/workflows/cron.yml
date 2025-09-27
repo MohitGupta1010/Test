@@ -10,15 +10,16 @@ jobs:
            - name: Print the message
              run: echo "Hello my friend super user ROOT"
 
-           - name: send mail
-             if: success()
-             uses: dawidd6/action-send-mail@v6
-             with:
-               server_address: smtp.gmail.com
-               server_port: 465
-               username: "${{ secrets.USER_NAME }}"
-               password: "${{ secrets.USER_PASSWORD }}"
-               subject: Test mail
-               from: "${{ secrets.SENDER }}"
-               to: "${{ secrets.RECEIVER }}"
-               body: "Cron execution for ${{ github.repository }} for branch ${{ github.ref_name }} completed successfully"
+#           - name: send mail
+#             if: success()
+#             uses: dawidd6/action-send-mail@v6
+#             with:
+#              server_address: smtp.gmail.com
+#               server_port: 465
+#               username: "${{ secrets.USER_NAME }}"
+#               password: "${{ secrets.USER_PASSWORD }}"
+#               subject: Test mail
+#               from: "${{ secrets.SENDER }}"
+#               to: "${{ secrets.RECEIVER }}"
+#               body: "Cron execution for ${{ github.repository }} for branch ${{ github.ref_name }} completed successfully"
+
