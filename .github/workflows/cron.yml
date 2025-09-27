@@ -1,0 +1,11 @@
+name: Testing cron
+on:
+  schedule:
+     - cron: "*/3 * * * *"
+
+jobs:
+   demo_job1:
+       runs-on: ubuntu-latest
+       steps:
+           - name: Print the message
+             run: echo "Hello my friend super user ROOt"
