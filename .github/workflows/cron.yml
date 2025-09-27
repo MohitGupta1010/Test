@@ -7,6 +7,7 @@ on:
 
 jobs:
    demo_job1:
+       if: github.event_name == 'schedule' && github.ref == 'refs/heads/master'
        runs-on: ubuntu-latest
        steps:
            - name: Print the message
