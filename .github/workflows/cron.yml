@@ -12,7 +12,7 @@ jobs:
 
            - name: send mail
              if: success()
-             uses: dawidd6/actions-send-mail
+             uses: dawidd6/action-send-mail@v6
              with:
                server_address: smtp.gmail.com
                server_port: 465
