@@ -5,7 +5,6 @@ on:
 
 jobs:
    demo_job1:
-       if: github.event_name == 'schedule'
        runs-on: ubuntu-latest
        steps:
            - name: Print the message
